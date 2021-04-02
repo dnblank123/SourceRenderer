@@ -39,4 +39,12 @@ impl Format {
       | Format::D24S8
       | Format::D32S8)
   }
+
+  pub fn is_compressed(&self) -> bool {
+    matches!(self,
+      Format::DXT1
+      | Format::DXT1Alpha
+      | Format::DXT3
+      | Format::DXT5)
+  }
 }
